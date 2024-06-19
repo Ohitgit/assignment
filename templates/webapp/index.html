@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+
+<head>
+    <title>Fx</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/e17ceb6b9c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+
+        }); // jquery end
+    </script>
+
+    <script>
+        $("#whylink").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#whyus").offset().top
+            }, 9000);
+        });
+    </script>
+
+    <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("btn-link");
+        var btns = header.getElementsByClassName("nav-link");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+                this.className += " active";
+            });
+        }
+    </script>
+
+
+    <style>
+        @media all and (min-width: 992px) {
+            .dropdown-large {
+                min-width: 500px;
+            }
+        }
+        /* -------------------------------- */
+        
+        .logo {
+            width: 100px;
+        }
+        
+        #forexdiv {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #dematdiv {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #fxdiv {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #paymentdiv {
+            display: flex;
+            justify-content: center;
+        }
+        
+        html {
+            scroll-behavior: smooth
+        }
+        
+        body {
+            margin: 0;
+            font-size: 16px;
+            /* font-family: 'Roboto Slab', serif; */
+        }
+        
+        .header {
+            background-color: #ffffff;
+            text-align: center;
+        }
+        
+        .w-25 {
+            width: 25%;
+        }
+        
+        .hd li a {
+            color: #2670af;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .txt-primaryk {
+            background-color: #1180f7;
+        }
+        
+        .hd-icon {
+            width: 50px;
+        }
+        
+        .mail-icon {
+            color: #2b76b7;
+        }
+        
+        .home-section {
+            display: block;
+        }
+        
+        .dropdown-menu {
+            background-color: #19578c;
+            box-shadow: 5px 10px 18px #0d3c6a;
+        }
+        
+        #navbar {
+            background-image: url(static/webapp/headers.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 50px;
+            z-index: 999;
+        }
+        
+        .ft-bg {
+            background-image: url(static/webapp/Footer.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-rebate {
+            background-image: url(static/webapp/Rebate.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* height: 500px; */
+        }
+        
+        .demat-bg {
+            background-image: url(static/webapp/demat-hd.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: center; */
+            height: 450px;
+        }
+        
+        .dp-bg {
+            background-image: url(static/webapp/pg-bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: center; */
+            height: 450px;
+        }
+        
+        .forex-bg {
+            background-image: url(static/webapp/Forex-hd.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: center; */
+            height: 450px;
+        }
+        
+        .overlay {
+            /* height: 500px; */
+            background-color: rgb(18 71 120 / 50%);
+            padding-top: 20px;
+        }
+        
+        .col-form-label {
+            background-color: rgb(255 255 255 / 75%);
+            font-size: 15px;
+            color: #354982;
+            box-shadow: 5px 10px 18px #0f406f;
+        }
+        
+        .imgk {
+            width: 100px;
+        }
+        
+        .icon-txt {
+            font-size: 15px;
+            margin-top: 5%;
+        }
+        
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+        
+        #navbar a:hover {
+            background-color: #78d2f4;
+            color: white;
+        }
+        
+        .active {
+            background-color: #78d2f4;
+            /* border-radius: 50%; */
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1020;
+        }
+        
+        .sticky+.content {
+            padding-top: 60px;
+        }
+        /* footer  start here  */
+        
+        ul {
+            padding: 0;
+            margin: 0
+        }
+        
+        li {
+            list-style: none
+        }
+        
+        a:focus,
+        a:hover {
+            text-decoration: none;
+            -webkit-transition: .3s ease;
+            -o-transition: .3s ease;
+            transition: .3s ease
+        }
+        
+        a:focus {
+            outline: 0
+        }
+        
+        img {
+            max-width: 100%
+        }
+        /* p {
+            font-size: 16px;
+            line-height: 30px;
+            color: black;
+            font-weight: 300
+        } */
+        
+        h4 {
+            margin: 0;
+            font-weight: 400;
+            padding: 0;
+            color: #99daf8;
+        }
+        
+        a {
+            color: #5867dd
+        }
+        
+        .no-padding {
+            padding: 0!important
+        }
+        
+        .go_top {
+            line-height: 40px;
+            cursor: pointer;
+            width: 40px;
+            background: #084379;
+            color: #fff;
+            position: fixed;
+            -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            right: -webkit-calc((100% - 1140px)/ 2);
+            right: calc((100% - 1140px)/ 2);
+            z-index: 111;
+            bottom: 80px;
+            text-align: center
+        }
+        
+        .go_top span {
+            display: inline-block
+        }
+        
+        .footer-big .footer-widget {
+            margin-bottom: 40px
+        }
+        
+        .footer-big .footer-menu ul li a,
+        .footer-big p,
+        .footer-big ul li {
+            color: #ffffff;
+        }
+        
+        .footer-menu {
+            padding-left: 48px
+        }
+        
+        .footer-menu ul li a {
+            font-size: 15px;
+            line-height: 32px;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s
+        }
+        
+        .footer-menu ul li a:hover {
+            color: #adb5bd;
+        }
+        
+        .footer-menu--1 {
+            width: 100%
+        }
+        
+        .footer-widget-title {
+            line-height: 42px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        
+        .mini-footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 5px 0;
+        }
+        
+        .mini-footer p {
+            margin: 0;
+            line-height: 26px;
+            font-size: 15px;
+            color: #343a40;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .about {
+            background-image: url(static/webapp/about.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            padding-top: 10%;
+        }
+        
+        .contact {
+            z-index: -1;
+        }
+        
+        .why-us h4 {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            text-transform: uppercase;
+            padding: 10px;
+            color: white;
+        }
+        
+        .why-us {
+            background-color: #344983;
+        }
+        
+        .card-body h5 {
+            color: #344a83;
+            text-align: center;
+        }
+        
+        .text-success {
+            color: #459ee9!important;
+        }
+        
+        .all-hd {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #1d2124;
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #ffffff;
+            background-color: rgb(0 0 0 / 8%);
+            background-clip: padding-box;
+            border: 1px solid #ffffff;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            box-shadow: 5px 10px 18px #0f406f;
+        }
+        
+        .s-card {
+            box-shadow: 5px 10px 18px #dad5d5;
+        }
+        
+        .link-s {
+            font-size: 15px;
+        }
+        
+        .form-control::-webkit-input-placeholder {
+            color: white;
+        }
+        
+        .btn-secondaryk {
+            background-color: #78d2f4;
+            border-color: #78d2f4;
+        }
+        
+        .content-btn {
+            color: #fff;
+            background-color: #78d2f4;
+            border-color: #78d2f4;
+            width: 200px;
+            border-radius: 20px;
+        }
+        
+        .btn-successk {
+            background-color: #344a83;
+            border-color: #344a83;
+        }
+        
+        .disclamer {
+            font-size: 12px;
+            padding-left: 50px;
+            padding-right: 50px;
+            line-height: 20px;
+            text-align: justify;
+        }
+        
+        .table-sm td {
+            font-size: 15px;
+        }
+        
+        .txt-primary {
+            color: #344983;
+        }
+        
+        .demat-img {
+            padding: 50px;
+        }
+        
+        .wsbtn {
+            width: 200px;
+        }
+        
+        .nav-menu {
+            margin-top: -8px;
+        }
+        
+        .btn-save {
+            box-shadow: 5px 10px 18px #021300;
+        }
+        
+        @media (max-width:768px) {
+            .navbar-nav {
+                padding-left: 0%;
+                background-color: #6bacf3;
+                margin-top: 3%;
+                width: 100%;
+            }
+            .header {
+                height: 75px;
+            }
+            #navbar a:hover {
+                background-color: #1d2124;
+                color: white;
+            }
+            .navbar-dark .navbar-toggler {
+                float: right;
+            }
+            .nav-item:hover {
+                background-color: #1d2124;
+                color: white;
+                width: 100%;
+            }
+            .active {
+                width: 100%;
+            }
+            #navbar a {
+                width: 100%;
+            }
+            .about-p {
+                line-height: 30px;
+                color: #344983;
+                font-weight: 300;
+                text-align: justify;
+            }
+            .logo {
+                width: 150px;
+            }
+            .why-us h2 {
+                writing-mode: rl-tb;
+                text-orientation: inherit;
+                text-transform: uppercase;
+                padding: 10px;
+                color: white;
+                text-align: center;
+            }
+            .footer-widget-title,
+            ul {
+                text-align: center;
+            }
+            .widget-about {
+                text-align: center;
+            }
+            .contact-details {
+                display: flex;
+                justify-content: center;
+            }
+            .active {
+                border-radius: 0%;
+            }
+            .ft-logo {
+                text-align: center;
+                margin-bottom: 9%;
+                margin-bottom: 5%;
+            }
+            .sc-btn {
+                margin-left: 15%;
+            }
+            .wsbtn {
+                widows: 152px;
+            }
+            .d-flex {
+                display: block;
+            }
+            #forexdiv {
+                display: block;
+                justify-content: center;
+            }
+            .demat-img {
+                padding: 0px;
+                text-align: center;
+            }
+            #fxdiv {
+                display: block;
+                justify-content: center;
+                margin-top: 5%;
+            }
+            #paymentdiv {
+                display: block;
+                justify-content: center;
+                margin-top: 5%;
+            }
+            #dematdiv {
+                display: block;
+                justify-content: center;
+                margin-top: 5%;
+            }
+            .content-btn {
+                width: 145px;
+            }
+            .abouthd {
+                text-align: center;
+            }
+            .about {
+                background-image: none;
+                height: auto;
+                padding-top: 10%;
+            }
+            .abtbtn {
+                display: none;
+            }
+            .disclamercnt {
+                background-color: #0e3c69;
+            }
+            #rebatenote {
+                display: none;
+            }
+            .section-rebate {
+                background-image: none;
+                height: auto;
+            }
+            .overlay {
+                height: auto;
+                background-color: rgb(255 255 255);
+                padding-top: 20px;
+            }
+            .col-form-label {
+                background-color: rgb(255 255 255 / 75%);
+                font-size: 15px;
+                color: #354982;
+                box-shadow: none;
+            }
+            .form-control {
+                display: block;
+                width: 100%;
+                height: calc(1.5em + .75rem + 2px);
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #343a40;
+                background-color: #ffffff;
+                background-clip: padding-box;
+                border: 1px solid #0f406f;
+                border-radius: .25rem;
+                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                box-shadow: none;
+            }
+            .about {
+                padding-top: 0%;
+            }
+            .btn-save {
+                box-shadow: none;
+            }
+            #cn_no {
+                margin-top: 2%;
+            }
+            #headbtn {
+                display: none;
+            }
+            #navhd {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        /* footer css end here */
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid header" id="header">
+        <nav class="navbar navbar-expand-sm  navbar-dark" style="height: 50px;" id="navhd">
+            <a class="navbar-brand d-block" href="{%url 'web_home' %}">
+                <img src="{%static 'webapp/logo.png'%}" class="logo" /> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" id="headbtn" data-target="#collapsibleNavbark" style="border-color: rgb(23 84 139); ">
+                <i class="fa fa-bars" aria-hidden="true" style="color:rgb(23 84 139); "></i>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbark">
+                <ul class="navbar-nav ml-auto hd">
+                    <li>
+                        <a href="#" class="d-block">
+                            <i class="far fa-envelope mail-icon mt-2"></i>&nbsp;&nbsp;<small>info@fxfinancialservices.com</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/fxfinserv?s=08" target="_blank" class="d-block">
+                            <img src="{%static 'webapp/twiter.png'%}" /> </a>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/fxfinserv" target="_blank" class="d-block">
+                            <img src="{%static 'webapp/fb.png'%}" /> </a>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/fx-finance-services-0b2912204" target="_blank" class="d-block">
+                            <img src="{%static 'webapp/linkedin.png'%}" /> </a>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/fxfinserv/" target="_blank" class="d-block">
+                            <img src="{%static 'webapp/insta.png'%}" /> </a>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark d-block" id="navbar" style="background-image:url({%static 'webapp/Headers.jpg'%})">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav btn-link ml-auto nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link " href="{%url 'web_home' %}">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'web_home' %}#{{'abtus'}}">About Us</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'web_home' %}#{{'whyus'}}" id="whylink">Why Us</a>
+                </li>
+
+                <li class="nav-item dropdown highlightIt">
+                    <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Demat
+                    </a>
+                    <div class="dropdown-menu zindex-dropdown" aria-labelledby="dropdownMenuButton highlightIt">
+                        <a class="dropdown-item text-center fm highlightIt tradebulls" href="{%url 'demat' %}#{{'demat-section'}}">Tradebulls</a>
+                        <a class="dropdown-item text-center fm highlightIt" href="{%url 'demat' %}#{{'demat-section'}}">Zerodha</a>
+                        <a class="dropdown-item text-center fm highlightIt" href="{%url 'demat' %}#{{'demat-section'}}">Fyers</a>
+                        <a class="dropdown-item text-center fm highlightIt" href="{%url 'demat' %}#{{'demat-section'}}">Upstox</a>
+                        <a class="dropdown-item text-center fm highlightIt" href="{%url 'demat' %}#{{'demat-section'}}">Sharekhan</a>
+                        <a class="dropdown-item text-center fm highlightIt" href="{%url 'demat' %}#{{'demat-section'}}">Profitmart</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Forex </a>
+                    <div class="dropdown-menu dropdown-large">
+                        <div class="row">
+                            <div class="col-md-5 col-lg-5">
+                                <ul class="list-unstyled">
+                                    <li><a href="{%url 'six_info'%}">6i Trade</a></li>
+                                    <li><a href="{%url 'tio_markets_info'%}">Tiomarkets</a></li>
+                                    <li><a href="{%url 'fxtm_info'%}">FXTM (Forex Time)</a></li>
+
+
+                                    <li><a href="{%url 'royal_info'%}">Royal</a></li>
+                                    <li><a href="{%url 'swiss_markets_info'%}">Swiss Markets</a></li>
+                                    <li><a href="{%url 'bdswiss_info'%}">BDSwiss Markets </a></li>
+                                    <li><a href="{%url 'easy_market_info'%}">Easy Markets </a></li>
+
+
+                                </ul>
+                            </div>
+                            <!-- end col-3 -->
+                            <div class="col-md-5 col-lg-5">
+                                <ul class="list-unstyled">
+                                    <li><a href="{%url 'hot_forex_info'%}">Hot Forex</a></li>
+                                    <li><a href="{%url 'fxpro_info'%}">Fx Pro</a></li>
+                                    <li><a href="{%url 'awatrade_info'%}">Avatrade</a></li>
+                                    <li><a href="{%url 'pepperstone_info'%}">Prepperstone</a></li>
+                                    <li><a href="{%url 'fpmarket_info'%}">FP Market</a></li>
+                                    <li><a href="{%url 'orbex_info'%}">Orbex</a></li>
+                                    <li><a href="{%url 'fxprimus_info'%}">FxPrimus</a></li>
+
+                                </ul>
+                            </div>
+                            <!-- end col-3 -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- dropdown-large.// -->
+                </li>
+
+                <li class="nav-item dropdown highlightIt">
+                    <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Payment Gateway
+                    </a>
+                    <div class="dropdown-menu zindex-dropdown" aria-labelledby="dropdownMenuButton highlightIt">
+                        <a class="dropdown-item text-center fm highlightIt" href="https://www.divepay.com/join_for_free" target="_blank">Divepay</a>
+                        <a class="dropdown-item text-center fm highlightIt" href="https://member.neteller.com/wallet/account/sign-up?lang=eng&btag=a_26019b_1216c_&program=AGENTS" target="_blank">Neteller</a>
+                        <a class="dropdown-item text-center fm highlightIt" href="https://account.skrill.com/wallet/account/sign-up?btag=a_63454b_3265c_&program=SKRILL" target="_blank">Skrill</a>
+                        <a class="dropdown-item text-center fm highlightIt" href="https://www.paypal.com/gb/welcome/signup/#/mobile_conf" target="_blank">Paypal</a>
+
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'rebate'%}">Rebate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="content pb-5 d-block">
+        {% block page %}{%endblock%}
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-white bg" style="margin-bottom:0;background-image:url({%static 'webapp/Footer.jpg'%});">
+
+        <div class="container-fluid">
+            <div class="row pt-5">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <h4 class="text-white text-uppercase">quick links of services</h4>
+
+                </div>
+            </div>
+            <br>
+
+            <div class="row mt-5">
+
+                <!-- <div class="col-lg-4 col-md-4">
+                    <ul style="line-height: 35px;">
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">About</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">why us</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">Education</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">blog</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">rebate</a>
+                        </li>
+
+                    </ul>
+                </div> -->
+
+
+
+                <div class="col-lg-4 col-md-4">
+
+                    <h4 class="footer-widget-title">Demat</h4>
+                    <ul style="line-height: 35px;">
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">Tradebulls</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">Zerodha</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">Fyers</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">Upstox</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">Sharekhan</a>
+                        </li>
+
+                        <li>
+                            <a href="{%url 'demat' %}#{{'demat-section'}}" class="text-white">ProfitMart</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="row">
+                        <div class="col-lg-12 cool-md-12 text-center">
+                            <h4 class="text-center">Forex</h4>
+
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="footer-widget">
+                                <div class="footer-menu no-padding">
+                                    <ul style="line-height: 0px;">
+                                        <li>
+                                            <a href="{%url 'six_info'%}" target="_blank" class="text-white">6i Trade</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'tio_markets_info'%}" class="text-white">Tiomarkets</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'fxtm_info'%}" class="text-white">Fxtm</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'royal_info'%}" class="text-white">Royal</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'swiss_markets_info'%}" class="text-white">Swiss Markets</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'bdswiss_info'%}" target="_blank" class="text-white">BDSwiss</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'easy_market_info'%}" target="_blank" class="text-white">Easy Markets</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end /.footer-menu -->
+                            </div>
+                            <!-- Ends: .footer-widget -->
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="footer-widget">
+                                <div class="footer-menu no-padding">
+                                    <ul style="line-height: 0px;">
+                                        <li>
+                                            <a href="{%url 'hot_forex_info'%}" target="_blank" class="text-white">Hot Forex</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'fxpro_info'%}" target="_blank" class="text-white">Fx Pro</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'awatrade_info'%}" target="_blank" class="text-white">Awatrade</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'pepperstone_info'%}" target="_blank" class="text-white">Pepperstone</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'fpmarket_info'%}" target="_blank" class="text-white">FP Market</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'orbex_info'%}" target="_blank" class="text-white">Orbex</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'fxprimus_info'%}" target="_blank" class="text-white">FxPrimus</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end /.footer-menu -->
+                            </div>
+                            <!-- Ends: .footer-widget -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4">
+
+                    <h4>Payment Gatetway</h4>
+                    <br>
+                    <ul>
+                        <li>
+                            <a href="https://www.divepay.com/join_for_free" target="_blank" class="text-white">Divepay</a>
+                        </li>
+                        <li>
+                            <a href="https://member.neteller.com/wallet/account/sign-up?lang=eng&btag=a_26019b_1216c_&program=AGENTS" target="_blank" class="text-white">Neteller</a>
+                        </li>
+                        <li>
+                            <a href="https://account.skrill.com/wallet/account/sign-up?btag=a_63454b_3265c_&program=SKRILL" target="_blank" class="text-white">Skrill</a>
+                        </li>
+                        <li>
+                            <a href="https://www.paypal.com/gb/welcome/signup/#/mobile_conf" target="_blank" class="text-white">Paypal</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Grid container -->
+        <div class="container p-4 mt-3 disclamercnt">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/fxfinserv" role="button" target="_blank"><i class="fab fa-facebook-f"></i
+    ></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/fxfinserv?s=08" role="button" target="_blank"><i class="fab fa-twitter"></i
+    ></a>
+
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/fxfinserv/" role="button" target="_blank"><i class="fab fa-instagram"></i
+    ></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/fx-finance-services-0b2912204" role="button" target="_blank"><i class="fab fa-linkedin-in"></i
+    ></a>
+
+                <!-- whatsapp -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://wa.link/61fa3y" target="_blank" role="button"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+
+
+            </section>
+            <!-- Section: Social media -->
+
+
+
+
+            <section class="mt-5">
+                <p class="text-justify" style="font-size: 12px;color: #347fb3;">
+                    <b style="color:#67b6ec"> Disclaimer :</b> Trading forex/CFD’s on margin carries a high level of risk, and may not be suitable as you could sustain a total loss of your deposit. Leverage can work against you. Do not speculate with
+                    capital that you cannot afford to lose. Be aware and fully understand all risks associated with the market and trading. Before trading any products offered by Fx financial services Pvt. Ltd, http://fxfinancialservices.com/ inclusive
+                    of all branches, any affiliates, or other firms under the Fx financial services group of companies [collectively "Fxfinancialservices", carefully consider your financial situation and experience level. If you decide to trade products
+                    offered by Fx financial services Pvt. Ltd you must read and understand the Terms & Conditions on http://fxfinancialservices.com/. Fx financial services may provide general commentary which is not intended as investment advice and must
+                    not be construed as such. Seek advice from a separate financial advisor. fx financial services assume no liability for errors, inaccuracies or omissions; does not warrant the accuracy, completeness of information, text, images, graphics,
+                    Charts, Data, Links or other items contained within these materials. Read and understand the Terms and Conditions on the fx financial services website before taking further action.
+                </p>
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://www.divsolution.com/">DITS.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script>
+        $(document).on('click', '.dropdown-menu', function(e) {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>

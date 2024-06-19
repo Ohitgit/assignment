@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+{%load static%}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <title>6itrade</title>
+    <script src="https://kit.fontawesome.com/e17ceb6b9c.js" crossorigin="anonymous"></script>
+
+    <style>
+        .header {
+            background-color: #761823;
+            height: 40px;
+            width: 63%;
+            margin-left: 4%;
+        }
+        
+        .content {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        
+        .ml {
+            margin-left: 48px;
+        }
+        
+        .ml1 {
+            margin-left: 5px;
+        }
+        
+        .ml2 {
+            margin-left: 45px
+        }
+        
+        .ml3 {
+            margin-left: 52px
+        }
+        
+        .ml5 {
+            margin-left: 5px;
+        }
+        
+        .ml4 {
+            margin-left: 2px;
+        }
+        
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+        
+        .footer {
+            height: 27px;
+            width: 63%;
+            margin-left: 4%;
+            padding-top: 7px;
+            border: 1px dashed #761823;
+            text-align: center;
+            border-left-style: none;
+            border-right-style: none;
+        }
+        
+        .subheading {
+            margin-left: 28%;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        /* social media icon start here */
+        
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+        
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+    </style>
+
+
+    <div class="section" style="margin-left: 20%;">
+
+        <div class="header">
+            <img src="https://welcome.6itrade.com/logo/" style="width:75px;margin-left:44%;margin-top:3px" />
+
+        </div>
+        <div class="subheading">
+            <p>Trade the way you LIKE</p>
+        </div>
+
+
+
+        <div class="content">
+            <p>Dear <span style="text-transform: capitalize;">{{name}}</span></p>
+            <p>Greetings for the day!</p>
+            <p>Thank you for showing interest in trading with FX Financial Services</p>
+
+
+            <table style="padding:20px">
+                <tr>
+                    <td> <b>Name</b></td>
+                    <td>.</td>
+                    <td style="padding-left: 10px;">{{name}}</td>
+                </tr>
+                <tr>
+                    <td><b>Email</b></td>
+                    <td>.</td>
+
+                    <td style="padding-left: 10px;">{{email}}</td>
+                </tr>
+                <tr>
+                    <td><b>Contact No</b></td>
+                    <td>.</td>
+
+                    <td style="padding-left: 10px;">{{phone_no}}</td>
+                </tr>
+                <tr>
+                    <td><b>Service</b></td>
+                    <td>.</td>
+
+                    <td style="padding-left: 10px;">{{service}}</td>
+                </tr>
+                <tr>
+                    <td><b>Broker</b></td>
+                    <td>.</td>
+
+                    <td style="padding-left: 10px;">{{broker}}</td>
+                </tr>
+            </table>
+
+        </div><br>
+        <div class="content">
+            <p>Regards,<br>Fx Team</p>
+        </div>
+
+
+        <div class="footer">
+            <b>IT IS AN AUTOMATED MAIL - PLEASE DO NOT REPLY</b>
+        </div>
+        <p style="margin-left:4%;font-size:11px;">If you require any further clarification, please do not hesitate to cantact us via email <span style="color:#2675d8"><b>support@6itrade.com</b></span></p>
+
+        <div class="flex content">
+            <div class="" style=" background-color: #761823;padding:5px;width:65px;height: 25px;">
+                <img src="http://127.0.0.1:8050/logo/" style="width:62px;" />
+
+            </div>
+            <div style="margin-left:1%;padding-top: 7px;">
+                <span style="color:#2675d8;padding-top: 5px;"><b><a href="https://www.6itrade.com/" target="_blank">http://www.fxfinancialservices.com/</a></b></span> </div>
+            <div style="border-right: 2px solid #761823;height: 40px;margin-left:1%">
+
+            </div>
+            <div style="display: flex;justify-content: flex-start;">
+
+
+                <a href="https://www.linkedin.com/company/6itrade/" target="_blank">
+                    <img src="https://welcome.6itrade.com/linkedin/" style="margin-top:3px" />
+
+                </a>
+                <a href="https://www.facebook.com/6itrade" target="_blank">
+                    <img src="https://welcome.6itrade.com/fb/" style="margin-top:3px" />
+
+                </a>
+                <a href="https://twitter.com/6iTrade" target="_blank">
+                    <img src="https://welcome.6itrade.com/twiter/" style="margin-top:3px" />
+
+                </a>
+                <a href="https://www.instagram.com/6itrade/" target="_blank">
+                    <img src="https://welcome.6itrade.com/insta/" style="margin-top:3px" />
+
+                </a>
+
+                <ul class="list-unstyled list-inline text-center" style="color:white">
+
+
+
+
+
+
+                    <!-- <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+
+                    <a href="#" class="fa fa-linkedin"></a>
+
+                    <a href="#" class="fa fa-instagram"></a> -->
+                </ul>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+
+</html>

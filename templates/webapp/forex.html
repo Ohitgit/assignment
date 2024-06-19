@@ -1,0 +1,113 @@
+{%extends 'webapp/index.html'%} {%load static%} {% block page %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 pt-3">
+            <h2 class="text-uppercase txt-primary text-center">Forex</h2>
+        </div>
+    </div>
+    <div class="row forex-bg">
+        <!-- this is bg of heading with background-image -->
+    </div>
+
+    <div class="section">
+        <div id="forexdiv">
+            <div class="demat-img">
+                <a href="{%url 'six_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/6i.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">6i Trade</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'tio_markets_info'%}" target="_blanck"> <img src="{%static 'webapp/forex_icon/TM.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Tiomarkets</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'fxtm_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/FXTM.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Fxtm</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'royal_info'%}"> <img src="{%static 'webapp/forex_icon/Royal.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Royal</p>
+                </a>
+            </div>
+
+
+            <div class="demat-img">
+                <a href="{%url 'swiss_markets_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/Swiss.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Swiss Markets</p>
+                </a>
+            </div>
+
+            <div class="demat-img">
+                <a href="{%url 'bdswiss_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/BDswiss.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">BDSwiss</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'easy_market_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/Easy.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Easy Markets</p>
+                </a>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="section">
+        <div id="fxdiv">
+            <div class="demat-img">
+                <a href="{%url 'hot_forex_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/Hoforex.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Hot Forex</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'fxpro_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/FXpro.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">FXPro</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'awatrade_info'%}" target="_blank"><img src="{%static 'webapp/forex_icon/AVA.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Awatrade</p>
+
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'pepperstone_info'%}" target="_blank"><img src="{%static 'webapp/forex_icon/pepperstone.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Pepperstone</p>
+
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'fpmarket_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/FP.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">FP Market</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'orbex_info'%}" target="_blank"> <img src="{%static 'webapp/forex_icon/Orbex.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Orbex</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="{%url 'fxprimus_info'%}" target="_blank"><img src="{%static 'webapp/forex_icon/FXprimus.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">FxPrimus</p>
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+{%endblock%}

@@ -1,0 +1,47 @@
+{%extends 'webapp/index.html'%} {%load static%} {% block page %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 pt-3">
+            <h2 class="text-uppercase txt-primary text-center">payment getway</h2>
+        </div>
+    </div>
+    <div class="row dp-bg">
+        <!-- this is bg of heading with background-image  -->
+    </div>
+
+    <div class="section">
+        <div id="paymentdiv">
+            <div class="demat-img">
+                <a href="https://www.divepay.com/join_for_free" target="_blank"> <img src="{%static 'webapp/payment_gateway_icon/dp.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Divepay</p>
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="https://member.neteller.com/wallet/account/sign-up?lang=eng&btag=a_26019b_1216c_&program=AGENTS" target="_blank"><img src="{%static 'webapp/payment_gateway_icon/Netlr.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Neteller</p>
+
+                </a>
+            </div>
+            <div class="demat-img">
+                <a href="https://account.skrill.com/wallet/account/sign-up?btag=a_63454b_3265c_&program=SKRILL" target="_blank"><img src="{%static 'webapp/payment_gateway_icon/Skrill.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Skrill</p>
+
+                </a>
+            </div>
+
+            <div class="demat-img">
+                <a href="https://www.paypal.com/gb/welcome/signup/#/mobile_conf" target="_blank"><img src="{%static 'webapp/payment_gateway_icon/PP.jpg'%}" class="imgk" />
+                    <p class="txt-primary text-center icon-txt">Paypal</p>
+
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+{%endblock%}

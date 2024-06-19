@@ -1,0 +1,154 @@
+{%extends 'webapp/index.html'%} {%load static%} {% block page %}
+<div class="container-fluid">
+
+    <div class="row">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <!-- <div class="carousel-item active">
+                    <img src="{%static 'webapp/fxnav.jpg'%}" alt="Los Angeles" style="height:90vh;width:100%">
+
+                </div> -->
+
+                <div class="carousel-item active">
+                    <!-- <img src="la.jpg" alt="Los Angeles" width="1100" height="500"> -->
+                    <img src="{%static 'webapp/slide1.jpg'%}" style="height:85vh;width:100vw" /> </a>
+
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{%static 'webapp/slide2.jpg'%}" style="height:85vh;width:100vw" /> </a>
+                </div>
+                <div class="carousel-item">
+                    <img src="{%static 'webapp/slide3.jpg'%}" style="height:85vh;width:100vw" /> </a>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid mt-5 about" id="abtus">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 offset-md-3 offset-lg-3">
+            <h4 style="color:#344983" class="text-uppercase abouthd"><b>about us</b></h4>
+        </div>
+        <div class="col-lg-4 col-md-4 offset-md-1 offset-lg-1">
+            <p class="text-center" style="color:#344983;line-height: 35px;">
+                We are serving Online Trading platform-related services for the past 12 years. All our clients from all over the world are satisfied with our services. We help & support all the clients at 24 x 6.
+            </p>
+
+
+        </div>
+    </div>
+    <div class="row pt-5 mt-5 abtbtn">
+        <div class="col-lg-5 col-md-5 offset-md-6 offset-lg-6 col-xs-offset-0 col-sm-offset-0 pl-5">
+            <div class="btn-group sc-btn" role="group" aria-label="Basic example">
+                <a type="button" class="btn btn-secondaryk text-white wsbtn" href="https://wa.link/61fa3y" target="_blank">Whatsapp
+                        &nbsp;
+                    <span><img src="{%static 'webapp/wp.png'%}" style="width:25px" />
+                    </a>
+                <a type="button" class="btn btn-successk text-white wsbtn" href="https://msng.link/o/?live:.cid.eacae6762f3993f6=sk" target="_blank"><span>
+                        <img src="{%static 'webapp/Skype.png'%}" style="width:25px;margin-left:-29px" />&nbsp;&nbsp;&nbsp;&nbsp;Skype
+                     </a>
+                </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="container-fluid mt-5" id="whyus">
+    <div class="row">
+
+        <h4 style="background-color:#344983" class="text-uppercase  text-white p-2 col-lg-3 col-md-3 text-center">Why Us</h4>
+
+
+    </div>
+    <div class="row mt-4">
+
+        <div class="col-lg-12 col-md-12">
+            <p class="about-p text-justify pl-5 pr-5 " id="abt-p" style="color:#344a83;">We have affiliated with TOP Trading Brokers with Fast, Safe & Secure Payment Gateways. Our customers' investment safety is our primary motto. We help & support in Demat/Trading Account, Forex IB/ Trading Account Registration/sign Up. If any
+                client facing an issue with Deposits/Withdrawal we are ready to help those clients. We are in collaboration with trusted payment gateways for the safety of client's funds. We brief clients on how to manage their investment with LOW-RISK
+                MANAGEMENT.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt-5">
+    <div class="row">
+
+        <h4 class="text-uppercase text-white p-2 offset-md-9 offset-lg-9 col-lg-3 col-md-3 text-center" style="background-color:#344983">services</h4>
+
+    </div>
+
+
+    <div class="row mt-4">
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card s-card">
+                <img class="card-img-top" src="{%static 'webapp/Forex.jpg'%}" alt="Card image cap">
+                <div class="card-body text-center">
+                    <b class="card-title text-uppercase text-center" style="color:#0f406f">forex trading account</b>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <a href="{%url 'forex'%}" class="text-success link-s">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card s-card">
+                <img class="card-img-top" src="{%static 'webapp/pg.jpg'%}" alt="Card image cap">
+                <div class="card-body text-center">
+                    <b class="card-title text-uppercase text-center" style="color:#0f406f">payment gateways</b><br>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <a href="{%url 'payment_getway'%}" class="text-success link-s">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card s-card">
+                <img class="card-img-top" src="{%static 'webapp/Demat.jpg'%}" alt="Card image cap">
+                <div class="card-body text-center">
+                    <b class="card-title text-uppercase text-center" style="color:#0f406f">demat & trading account</b><br>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <a href="{%url 'demat'%}" class="text-success link-s">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}
