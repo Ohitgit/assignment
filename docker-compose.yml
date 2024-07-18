@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/djangoapp
+    ports:
+      - 8000:8000
+    image: app:djangoapp
+    container_name: djangoapp
+    command: python manage.py runserver
